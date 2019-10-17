@@ -18,6 +18,7 @@
 		853E6F262350FE53001D1C4C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E6F252350FE53001D1C4C /* Game.swift */; };
 		853E6F28235107C5001D1C4C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 853E6F27235107C5001D1C4C /* Default-568h@2x.png */; };
 		853E6F2A23520B34001D1C4C /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E6F2923520B33001D1C4C /* CardButton.swift */; };
+		85E639492358EDF000749DCD /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E639482358EDF000749DCD /* BorderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		853E6F252350FE53001D1C4C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		853E6F27235107C5001D1C4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		853E6F2923520B33001D1C4C /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
+		85E639482358EDF000749DCD /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				853E6F212350F63B001D1C4C /* Card.swift */,
 				853E6F2923520B33001D1C4C /* CardButton.swift */,
 				853E6F232350F73B001D1C4C /* CardDeck.swift */,
+				85E639482358EDF000749DCD /* BorderButton.swift */,
 				853E6F122350F4F5001D1C4C /* Main.storyboard */,
 				853E6F252350FE53001D1C4C /* Game.swift */,
 				853E6F1A2350F4F6001D1C4C /* Info.plist */,
@@ -169,6 +172,7 @@
 				853E6F0D2350F4F5001D1C4C /* AppDelegate.swift in Sources */,
 				853E6F0F2350F4F5001D1C4C /* SceneDelegate.swift in Sources */,
 				853E6F222350F63B001D1C4C /* Card.swift in Sources */,
+				85E639492358EDF000749DCD /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

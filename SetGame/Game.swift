@@ -50,17 +50,24 @@ struct Game {
         cardsTryMatch = []
     }
     
+    private mutating func replaceOrRemoveCardsIfIsMatch () {
+        if selectedCardsIsMatched == true {
+            cardsMatched = cardsTryMatch
+            for matchCard in cardsTryMatch {
+                cardsOnTheTable.remove(at: (cardsOnTheTable.firstIndex(of: matchCard))!)
+            }
+            if cardsOnTheTable.count < Conctants.gameStartCardsCount {
+                deal3moreCards()
+            }
+        }
+    }
+    
     mutating func choosenCard(with index: Int) {
         guard cardsOnTheTable.count >= index else {print("cardsOnTheTable have not value with index \(index)"); return}
         let card = cardsOnTheTable[index]
         
         if cardsSelected.count == 0 || cardsSelected.count == 1 {   //Выбрана одна или две карты
-            if selectedCardsIsMatched == true {
-                cardsMatched = cardsTryMatch
-                for matchCard in cardsTryMatch {
-                    cardsOnTheTable.remove(at: (cardsOnTheTable.firstIndex(of: matchCard))!)
-                }
-            }
+            replaceOrRemoveCardsIfIsMatch ()
             cardsTryMatch = []
             selectedCardsIsMatched = nil
             if let secondarySelectedIndex = cardsSelected.firstIndex(of: card) {
@@ -80,7 +87,15 @@ struct Game {
     }
     
     mutating func deal3moreCards () {
-        if allCards.cards.count >= 3 {
+        if selectedCardsIsMatched == true {
+            cardsMatched = cardsTryMatch
+            for matchCard in cardsTryMatch {
+                cardsOnTheTable.remove(at: (cardsOnTheTable.firstIndex(of: matchCard))!)
+            }
+        }
+        cardsTryMatch = []
+        selectedCardsIsMatched = nil
+        if allCards.cards.count >= 3 && cardsOnTheTable.count < Conctants.maxCardsCount{
             for _ in 0..<Conctants.deal3more {
                 let card = allCards.draw()
                 cardsOnTheTable.append(card)
@@ -90,6 +105,7 @@ struct Game {
     
     
     struct Conctants {
+        static let maxCardsCount = 24
         static let gameStartCardsCount = 12
         static let deal3more = 3
     }
