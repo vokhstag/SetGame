@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,347 +16,440 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-nF-aTb" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="44" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4pj-2b-vfn">
+                                <rect key="frame" x="20" y="44" width="374" height="652"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SE3-x5-5ux">
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-nF-aTb" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="U1P-nF-aTb" secondAttribute="height" multiplier="29:34" id="Z9H-LD-Eyo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Rl-8J-rt5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-Jv-dK5" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="192" y="44" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Rl-8J-rt5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QUj-sU-rCY" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="QUj-sU-rCY" secondAttribute="height" multiplier="29:34" id="6t7-7p-Bka"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWj-uP-8z8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QUj-sU-rCY" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="106" y="44" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQW-dt-qck"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tRC-Jv-dK5" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="tRC-Jv-dK5" secondAttribute="height" multiplier="29:34" id="NMm-kb-oG2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQW-dt-qck"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-7K-anR" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="278" y="44" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWj-uP-8z8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vGS-7K-anR" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="vGS-7K-anR" secondAttribute="height" multiplier="29:34" id="E9C-3c-Xrp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7f-Mv-W7g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WU6-BV-WCd" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="164" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7f-Mv-W7g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sUH-X8-yqF">
+                                        <rect key="frame" x="0.0" y="110" width="372" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WU6-BV-WCd" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WU6-BV-WCd" secondAttribute="height" multiplier="29:34" id="frI-ht-Ehz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCD-MO-3Qf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Kga-zU-WWH" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="192" y="164" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCD-MO-3Qf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-6h-IBM" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7eO-6h-IBM" secondAttribute="height" multiplier="29:34" id="bPW-mC-u51"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmt-x0-cbP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-6h-IBM" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="106" y="164" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qG-kF-T2I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Kga-zU-WWH" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Kga-zU-WWH" secondAttribute="height" multiplier="29:34" id="QfE-QW-1eV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qG-kF-T2I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-My-7Ng" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="278" y="164" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dmt-x0-cbP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-My-7Ng" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kDp-My-7Ng" secondAttribute="height" multiplier="29:34" id="46u-yQ-8zt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yg7-bC-Da9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LWS-AN-ag4" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="284" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yg7-bC-Da9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W9i-65-mhl">
+                                        <rect key="frame" x="0.0" y="220" width="372" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LWS-AN-ag4" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LWS-AN-ag4" secondAttribute="height" multiplier="29:34" id="aW0-9k-xRJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqS-wV-ZgE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="or7-ZA-2Hv" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="192" y="284" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqS-wV-ZgE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-wr-CNY" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aiX-wr-CNY" secondAttribute="height" multiplier="29:34" id="6Bo-Dk-e26"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgp-Eo-U3Y"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-wr-CNY" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="106" y="284" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rv0-hW-gY3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="or7-ZA-2Hv" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="or7-ZA-2Hv" secondAttribute="height" multiplier="29:34" id="y22-4R-KQG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rv0-hW-gY3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dqJ-k6-r2C" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="278" y="284" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgp-Eo-U3Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dqJ-k6-r2C" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dqJ-k6-r2C" secondAttribute="height" multiplier="29:34" id="l2c-9Z-02y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFy-f5-v4X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZD6-JE-C7e" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="404" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFy-f5-v4X"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rl1-eZ-dET">
+                                        <rect key="frame" x="0.0" y="330" width="372" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZD6-JE-C7e" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZD6-JE-C7e" secondAttribute="height" multiplier="29:34" id="4pz-8r-7QP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7R-So-T3L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4wm-FT-ptV" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="192" y="404" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7R-So-T3L"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ApH-P1-kim" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ApH-P1-kim" secondAttribute="height" multiplier="29:34" id="u8d-U9-1PK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9h-z8-X63"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ApH-P1-kim" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="106" y="404" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKA-zd-gNJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4wm-FT-ptV" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4wm-FT-ptV" secondAttribute="height" multiplier="29:34" id="pAb-vr-KCu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKA-zd-gNJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="41z-iG-j8c" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="278" y="404" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9h-z8-X63"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="41z-iG-j8c" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="41z-iG-j8c" secondAttribute="height" multiplier="29:34" id="sNS-Sz-fm2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1KW-oB-6II"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sfT-BR-G1W" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="524" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1KW-oB-6II"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wev-AQ-IfC">
+                                        <rect key="frame" x="0.0" y="440" width="372" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sfT-BR-G1W" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sfT-BR-G1W" secondAttribute="height" multiplier="29:34" id="gdG-wy-Ncb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZD-rN-6h5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KuH-eq-Tq0" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="192" y="524" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VZD-rN-6h5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1Yv-24-LUn" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1Yv-24-LUn" secondAttribute="height" multiplier="29:34" id="6Vr-gd-yo5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytl-0E-8cD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1Yv-24-LUn" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="106" y="524" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gy3-NU-jco"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KuH-eq-Tq0" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KuH-eq-Tq0" secondAttribute="height" multiplier="29:34" id="qSg-uF-uXY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gy3-NU-jco"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RIt-0V-72z" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="278" y="524" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytl-0E-8cD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RIt-0V-72z" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="RIt-0V-72z" secondAttribute="height" multiplier="29:34" id="FV0-Pw-Rnn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fkf-a4-nlp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Uv-Lf-yil" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="644" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fkf-a4-nlp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-U2-WEM">
+                                        <rect key="frame" x="0.0" y="550" width="372" height="102"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Uv-Lf-yil" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="3Uv-Lf-yil" secondAttribute="height" multiplier="29:34" id="2pm-ib-DOu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOW-qh-mZg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-uC-SLw" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="192" y="644" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eOW-qh-mZg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="f7v-rc-H9x" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="f7v-rc-H9x" secondAttribute="height" multiplier="29:34" id="Nhm-at-mYd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mtI-Y6-vXF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="f7v-rc-H9x" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="106" y="644" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tYx-9m-PxG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-uC-SLw" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bnj-uC-SLw" secondAttribute="height" multiplier="29:34" id="buA-S4-Iei"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tYx-9m-PxG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Qig-l3-ne5" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="278" y="644" width="78" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal">
-                                    <string key="title">●
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mtI-Y6-vXF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Qig-l3-ne5" customClass="CardButton" customModule="SetGame" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="87" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Qig-l3-ne5" secondAttribute="height" multiplier="29:34" id="M9S-Lx-ixi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal">
+                                                    <string key="title">●
 ▲
 ■</string>
-                                </state>
-                                <connections>
-                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYd-Vf-l1v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jj-ym-hTi" customClass="BorderButton" customModule="SetGame" customModuleProvider="target">
-                                <rect key="frame" x="18" y="791" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYd-Vf-l1v"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WU6-BV-WCd" secondAttribute="height" multiplier="11:3" id="Dty-kL-V2t"/>
+                                    <constraint firstAttribute="width" secondItem="3Uv-Lf-yil" secondAttribute="height" multiplier="11:3" id="ENd-fp-GTL"/>
+                                    <constraint firstAttribute="width" secondItem="ZD6-JE-C7e" secondAttribute="height" multiplier="11:3" id="TwL-es-gR2"/>
+                                    <constraint firstAttribute="width" secondItem="sfT-BR-G1W" secondAttribute="height" multiplier="11:3" id="jaf-0w-Wck"/>
+                                    <constraint firstAttribute="width" secondItem="U1P-nF-aTb" secondAttribute="height" multiplier="11:3" id="rDj-0F-J5j"/>
+                                    <constraint firstAttribute="width" secondItem="LWS-AN-ag4" secondAttribute="height" multiplier="11:3" id="rrA-oU-nOD"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jj-ym-hTi" customClass="BorderButton" customModule="SetGame" customModuleProvider="target">
+                                <rect key="frame" x="165.5" y="832" width="83" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dqJ-uk-9R3"/>
+                                </constraints>
                                 <state key="normal" title="Deal 3 more">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -365,34 +459,42 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4pj-2b-vfn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AoB-9e-nZK"/>
+                            <constraint firstItem="5Jj-ym-hTi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4pj-2b-vfn" secondAttribute="bottom" constant="20" id="N0M-S5-63J"/>
+                            <constraint firstItem="4pj-2b-vfn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NFM-4L-U4T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4pj-2b-vfn" secondAttribute="trailing" constant="20" id="Zr7-Yg-3Bb"/>
+                            <constraint firstItem="5Jj-ym-hTi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d7a-J8-J83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Jj-ym-hTi" secondAttribute="bottom" id="gEI-X5-M3t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="deal3Button" destination="5Jj-ym-hTi" id="Txn-wN-hXg"/>
-                        <outletCollection property="cardButtons" destination="U1P-nF-aTb" collectionClass="NSMutableArray" id="jeI-q9-N7j"/>
-                        <outletCollection property="cardButtons" destination="QUj-sU-rCY" collectionClass="NSMutableArray" id="kaL-PF-7MO"/>
-                        <outletCollection property="cardButtons" destination="tRC-Jv-dK5" collectionClass="NSMutableArray" id="b14-6f-RgN"/>
-                        <outletCollection property="cardButtons" destination="vGS-7K-anR" collectionClass="NSMutableArray" id="EJf-Iy-AFX"/>
-                        <outletCollection property="cardButtons" destination="WU6-BV-WCd" collectionClass="NSMutableArray" id="b6b-MD-mal"/>
-                        <outletCollection property="cardButtons" destination="7eO-6h-IBM" collectionClass="NSMutableArray" id="O9v-cj-4DW"/>
-                        <outletCollection property="cardButtons" destination="Kga-zU-WWH" collectionClass="NSMutableArray" id="3I3-ND-68b"/>
-                        <outletCollection property="cardButtons" destination="kDp-My-7Ng" collectionClass="NSMutableArray" id="tvg-xi-3tA"/>
-                        <outletCollection property="cardButtons" destination="LWS-AN-ag4" collectionClass="NSMutableArray" id="dk0-t9-gXJ"/>
-                        <outletCollection property="cardButtons" destination="aiX-wr-CNY" collectionClass="NSMutableArray" id="U2P-gl-zVH"/>
-                        <outletCollection property="cardButtons" destination="or7-ZA-2Hv" collectionClass="NSMutableArray" id="QRf-Cv-n3x"/>
-                        <outletCollection property="cardButtons" destination="dqJ-k6-r2C" collectionClass="NSMutableArray" id="m4q-i8-DK2"/>
-                        <outletCollection property="cardButtons" destination="ZD6-JE-C7e" collectionClass="NSMutableArray" id="do6-2t-chn"/>
-                        <outletCollection property="cardButtons" destination="ApH-P1-kim" collectionClass="NSMutableArray" id="vFk-ta-Wyg"/>
-                        <outletCollection property="cardButtons" destination="4wm-FT-ptV" collectionClass="NSMutableArray" id="dbT-Lr-sLZ"/>
-                        <outletCollection property="cardButtons" destination="41z-iG-j8c" collectionClass="NSMutableArray" id="GRC-Xg-042"/>
-                        <outletCollection property="cardButtons" destination="sfT-BR-G1W" collectionClass="NSMutableArray" id="Ikz-Ae-khm"/>
-                        <outletCollection property="cardButtons" destination="1Yv-24-LUn" collectionClass="NSMutableArray" id="Mtj-IP-QSU"/>
-                        <outletCollection property="cardButtons" destination="KuH-eq-Tq0" collectionClass="NSMutableArray" id="QAp-lL-Pln"/>
-                        <outletCollection property="cardButtons" destination="RIt-0V-72z" collectionClass="NSMutableArray" id="KJd-S7-v4E"/>
-                        <outletCollection property="cardButtons" destination="3Uv-Lf-yil" collectionClass="NSMutableArray" id="H3M-eH-j2X"/>
-                        <outletCollection property="cardButtons" destination="f7v-rc-H9x" collectionClass="NSMutableArray" id="b1f-vS-hYa"/>
-                        <outletCollection property="cardButtons" destination="bnj-uC-SLw" collectionClass="NSMutableArray" id="OfX-bu-utz"/>
-                        <outletCollection property="cardButtons" destination="Qig-l3-ne5" collectionClass="NSMutableArray" id="LJl-9f-BgI"/>
+                        <outletCollection property="cardButtons" destination="U1P-nF-aTb" collectionClass="NSMutableArray" id="XRg-8h-L1b"/>
+                        <outletCollection property="cardButtons" destination="QUj-sU-rCY" collectionClass="NSMutableArray" id="vNf-HD-lav"/>
+                        <outletCollection property="cardButtons" destination="tRC-Jv-dK5" collectionClass="NSMutableArray" id="DHc-5d-g6P"/>
+                        <outletCollection property="cardButtons" destination="vGS-7K-anR" collectionClass="NSMutableArray" id="xW0-v7-mmF"/>
+                        <outletCollection property="cardButtons" destination="WU6-BV-WCd" collectionClass="NSMutableArray" id="Xbq-UE-TuV"/>
+                        <outletCollection property="cardButtons" destination="7eO-6h-IBM" collectionClass="NSMutableArray" id="GZ5-nZ-EQe"/>
+                        <outletCollection property="cardButtons" destination="Kga-zU-WWH" collectionClass="NSMutableArray" id="R1F-B4-OUS"/>
+                        <outletCollection property="cardButtons" destination="kDp-My-7Ng" collectionClass="NSMutableArray" id="H3M-TL-LCt"/>
+                        <outletCollection property="cardButtons" destination="LWS-AN-ag4" collectionClass="NSMutableArray" id="2J5-25-Y0f"/>
+                        <outletCollection property="cardButtons" destination="aiX-wr-CNY" collectionClass="NSMutableArray" id="kUh-hL-SIR"/>
+                        <outletCollection property="cardButtons" destination="or7-ZA-2Hv" collectionClass="NSMutableArray" id="0XJ-CJ-MhV"/>
+                        <outletCollection property="cardButtons" destination="dqJ-k6-r2C" collectionClass="NSMutableArray" id="wXa-Fw-WrM"/>
+                        <outletCollection property="cardButtons" destination="ZD6-JE-C7e" collectionClass="NSMutableArray" id="4Qu-Pd-aZP"/>
+                        <outletCollection property="cardButtons" destination="ApH-P1-kim" collectionClass="NSMutableArray" id="G3J-Gi-n5u"/>
+                        <outletCollection property="cardButtons" destination="4wm-FT-ptV" collectionClass="NSMutableArray" id="XNH-PL-OwV"/>
+                        <outletCollection property="cardButtons" destination="41z-iG-j8c" collectionClass="NSMutableArray" id="Y8v-Uq-Jnn"/>
+                        <outletCollection property="cardButtons" destination="sfT-BR-G1W" collectionClass="NSMutableArray" id="NhB-Tj-UTm"/>
+                        <outletCollection property="cardButtons" destination="1Yv-24-LUn" collectionClass="NSMutableArray" id="6ci-Uf-MIH"/>
+                        <outletCollection property="cardButtons" destination="KuH-eq-Tq0" collectionClass="NSMutableArray" id="3aL-Vj-eum"/>
+                        <outletCollection property="cardButtons" destination="RIt-0V-72z" collectionClass="NSMutableArray" id="hEu-Dg-dYa"/>
+                        <outletCollection property="cardButtons" destination="3Uv-Lf-yil" collectionClass="NSMutableArray" id="aAN-ca-60x"/>
+                        <outletCollection property="cardButtons" destination="f7v-rc-H9x" collectionClass="NSMutableArray" id="8jb-hp-BQa"/>
+                        <outletCollection property="cardButtons" destination="bnj-uC-SLw" collectionClass="NSMutableArray" id="ZUS-3y-vZu"/>
+                        <outletCollection property="cardButtons" destination="Qig-l3-ne5" collectionClass="NSMutableArray" id="VWc-yc-bvY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

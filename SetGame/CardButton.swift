@@ -15,8 +15,7 @@ class CardButton: UIButton {
     let fill: [CGFloat] = [0.0, 0.15, 1]
     
     func drawCardButton (shapeIndex: Int, colorIndex: Int, count: Int, fillIndex: Int) {
-        let fillOrNot: CGFloat = (fill[fillIndex] == 0.0) ? 5.0 : -8.0
-        let title = createString(shape: shape[shapeIndex], color: color[colorIndex], count: count, fillValue: fill[fillIndex], fill: fillOrNot)
+        let title = createString(shape: shape[shapeIndex], color: color[colorIndex], count: count, fillValue: fill[fillIndex], fill: {(fill[fillIndex] == 0.0) ? 5.0 : -8.0})
         setAttributedTitle(title, for: .normal)
         
         layer.cornerRadius = 5.0
@@ -34,10 +33,10 @@ class CardButton: UIButton {
         layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
     }
     
-    private func createString(shape: String, color: UIColor, count: Int, fillValue: CGFloat, fill: CGFloat) -> NSAttributedString {
+    private func createString(shape: String, color: UIColor, count: Int, fillValue: CGFloat, fill: () -> CGFloat) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
-        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: color.withAlphaComponent(fillValue), .strokeWidth: fill, .strokeColor: color, NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: color.withAlphaComponent(fillValue), .strokeWidth: fill(), .strokeColor: color, NSAttributedString.Key.paragraphStyle: paragraphStyle]
         var str = "\n"
         for _ in 1...count {
             str += shape + "\n"

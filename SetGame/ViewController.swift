@@ -33,9 +33,6 @@ class ViewController: UIViewController {
     @IBAction func deal3More(_ sender: UIButton) {
         game.deal3moreCards()
         updateViewFromModel()
-        ///
-        print("game.cards = \(game.cardsOnTheTable.count)")
-        print("cardButtons = \(cardButtons.count)")
     }
     
     private func onOffDeal3Button () {
@@ -54,7 +51,7 @@ class ViewController: UIViewController {
                 cardButton.isHidden = false
                 let card = game.cardsOnTheTable[cardIndex]
                 updateCardUI(cardButton, with: card)
-                
+
             } else {
                 cardButton.isHidden = true
             }

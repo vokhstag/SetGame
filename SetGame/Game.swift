@@ -22,22 +22,23 @@ struct Game {
     var selectedCardsIsMatched: Bool?
     
     mutating func matchCheck() {
-        guard cardsTryMatch.count == 3 else {return}
-        var shapesValue = 0
-        var colorsValue = 0
-        var countsValue = 0
-        var fillsValue = 0
-        for card in cardsTryMatch {
-            shapesValue += card.shape.rawValue
-            colorsValue += card.color.rawValue
-            countsValue += card.count.rawValue
-            fillsValue += card.fill.rawValue
-        }
-        if shapesValue % 3 == 0 && colorsValue % 3 == 0 && countsValue % 3 == 0 && fillsValue % 3 == 0 {
-            selectedCardsIsMatched = true
-        } else {
-            selectedCardsIsMatched = false
-        }
+//        guard cardsTryMatch.count == 3 else {return}
+//        var shapesValue = 0
+//        var colorsValue = 0
+//        var countsValue = 0
+//        var fillsValue = 0
+//        for card in cardsTryMatch {
+//            shapesValue += card.shape.rawValue
+//            colorsValue += card.color.rawValue
+//            countsValue += card.count.rawValue
+//            fillsValue += card.fill.rawValue
+//        }
+//        if shapesValue % 3 == 0 && colorsValue % 3 == 0 && countsValue % 3 == 0 && fillsValue % 3 == 0 {
+//            selectedCardsIsMatched = true
+//        } else {
+//            selectedCardsIsMatched = false
+//        }
+        selectedCardsIsMatched = threeCardIsMatch(cards: cardsTryMatch)
     }
     
     mutating func newGame() {
@@ -108,5 +109,26 @@ struct Game {
         static let maxCardsCount = 24
         static let gameStartCardsCount = 12
         static let deal3more = 3
+    }
+}
+
+extension Game {
+    func threeCardIsMatch (cards: [Card]) -> Bool? {
+        guard cards.count == 3 else {return nil}
+        var shapesValue = 0
+        var colorsValue = 0
+        var countsValue = 0
+        var fillsValue = 0
+        for card in cardsTryMatch {
+            shapesValue += card.shape.rawValue
+            colorsValue += card.color.rawValue
+            countsValue += card.count.rawValue
+            fillsValue += card.fill.rawValue
+        }
+        if shapesValue % 3 == 0 && colorsValue % 3 == 0 && countsValue % 3 == 0 && fillsValue % 3 == 0 {
+            return true
+        } else {
+            return false
+        }
     }
 }
